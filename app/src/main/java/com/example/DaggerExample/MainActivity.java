@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         MobileComponent mobileComponent = DaggerMobileComponent.create();
         //Mobile mobile= mobileComponent.getMobile();
-        mobileComponent.inject(MainActivity.this);
+        mobileComponent.inject(this);
 
 
         mobile.run();
