@@ -1,4 +1,4 @@
-package com.example.DaggerExample;
+package com.example.DaggerExample.model;
 
 import android.util.Log;
 
@@ -8,6 +8,6 @@ public class Battery {
 
     @Inject
     public Battery() {
-        Log.i("Battery","In Battery constructor");
+        Log.i("Dagger Battery","In Battery constructor");
     }
 }

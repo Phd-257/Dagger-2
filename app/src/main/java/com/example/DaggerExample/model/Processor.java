@@ -1,4 +1,4 @@
-package com.example.DaggerExample;
+package com.example.DaggerExample.model;
 
 import android.util.Log;
 
@@ -8,6 +8,6 @@ public class Processor {
 
     @Inject
     public Processor() {
-        Log.i("In Processor","Processor Constructor");
+        Log.i("Dagger Processor","In Processor Constructor");
     }
 }

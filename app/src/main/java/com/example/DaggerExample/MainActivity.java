@@ -4,7 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.DaggerExample.component.DaggerMobileComponent;
+import com.example.DaggerExample.component.MobileComponent;
+import com.example.DaggerExample.model.Mobile;
+
+import javax.inject.Inject;
+
 public class MainActivity extends AppCompatActivity {
+
+    @Inject
+    Mobile mobile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +25,16 @@ public class MainActivity extends AppCompatActivity {
 //        mobile.run();
 
 
-        
+        //phase 1
+
+        MobileComponent mobileComponent = DaggerMobileComponent.create();
+        //Mobile mobile= mobileComponent.getMobile();
+        mobileComponent.inject(MainActivity.this);
+
+
+        mobile.run();
+
+
 
     }
 }
