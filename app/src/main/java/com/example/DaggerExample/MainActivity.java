@@ -1,4 +1,4 @@
-package com.example.dagger;
+package com.example.DaggerExample;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,5 +10,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //old method
+//        Mobile mobile= new Mobile(new Processor(),new Battery());
+//        mobile.run();
+
+
+        
+
     }
 }

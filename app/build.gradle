@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.dagger"
+        applicationId "com.example.DaggerExample"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -36,4 +36,9 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //Dagger 2 by Google
+
+    implementation 'com.google.DaggerExample:DaggerExample:2.36'
+    annotationProcessor 'com.google.DaggerExample:DaggerExample-compiler:2.36'
 }
