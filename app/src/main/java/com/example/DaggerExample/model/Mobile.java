@@ -26,7 +26,7 @@ public class Mobile {
         Log.i("Dagger Mobile","in run method");
     }
 
-    @Inject
+
     public void connectCharger(Charger charger){
 
         charger.setCharger(this);

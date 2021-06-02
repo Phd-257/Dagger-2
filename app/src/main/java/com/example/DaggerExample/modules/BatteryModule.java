@@ -12,14 +12,14 @@ public class BatteryModule {
 
 
     @Provides
-    Cobalt getCobalt(){
+    static Cobalt getCobalt(){
 
         return new Cobalt();
 
     }
 
     @Provides
-    Lithium getLithium(){
+    static Lithium getLithium(){
 
         Lithium lithium = new Lithium();
         lithium.done();
@@ -27,7 +27,7 @@ public class BatteryModule {
     }
 
     @Provides
-    Battery getBattery(){
+    static Battery getBattery(){
 
         return new Battery(getCobalt(),getLithium());
     }
