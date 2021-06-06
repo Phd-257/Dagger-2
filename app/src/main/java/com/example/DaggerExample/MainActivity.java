@@ -27,7 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
         //phase 1
 
+<<<<<<< Updated upstream
         MobileComponent mobileComponent = DaggerMobileComponent.create();
+=======
+        MobileComponent mobileComponent = DaggerMobileComponent
+                .factory().create(4,8,64);
+>>>>>>> Stashed changes
         //Mobile mobile= mobileComponent.getMobile();
         mobileComponent.inject(this);
 

@@ -13,11 +13,13 @@ public class Mobile {
     Processor processor;
 
     Battery battery;
+    Camera camera;
 
     @Inject
-    public Mobile(Battery battery,Processor processor) {
+    public Mobile(Battery battery,Processor processor,Camera camera) {
         this.processor = processor;
         this.battery=battery;
+        this.camera=camera;
         Log.i("Dagger Mobile","Mobile Constructor");
     }
 
