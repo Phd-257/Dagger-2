@@ -6,17 +6,22 @@ import javax.inject.Inject;
 
 public class SnapDragon implements Processor {
 
-    
-    public SnapDragon() {
+    int clockSpeed;
 
-        Log.i("Dagger SnapDragon", "in SnapDragon");
+
+    @Inject
+    public SnapDragon(int clockSpeed) {
+
+        this.clockSpeed=clockSpeed;
+
+        Log.i("Dagger SnapDragon", "in SnapDragon "+clockSpeed);
 
     }
 
 
     @Inject
     @Override
-    public void run() {
-        Log.i("Dagger SnapDragon", "Run as SnapDragon");
+    public void start() {
+        Log.i("Dagger SnapDragon", "Run as SnapDragon"+clockSpeed);
     }
 }

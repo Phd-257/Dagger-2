@@ -1,6 +1,7 @@
 package com.example.DaggerExample.modules;
 
 
+
 import com.example.DaggerExample.model.Processor;
 import com.example.DaggerExample.model.SnapDragon;
 
@@ -10,16 +11,25 @@ import dagger.Provides;
 @Module
 public class SnapDragonModule {
 
+   public int clockSpeed;
+
+//    @Provides
+//    static SnapDragon getSnapDragon(){
+//        return new SnapDragon(3);
+//    }
 
     @Provides
-    static SnapDragon getSnapDragon(){
-        return new SnapDragon();
+     int getClockSpeed() {
+        return clockSpeed;
     }
 
+    public SnapDragonModule(int clockSpeed) {
+        this.clockSpeed = clockSpeed;
+    }
 
     @Provides
-    static Processor getProcessor(){
+    Processor getProcessor(SnapDragon snapDragon){
 
-        return getSnapDragon();
+        return snapDragon;
     }
 }
